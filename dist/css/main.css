@@ -1,0 +1,20 @@
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem;
+    background: rgba(46, 50, 57, 0.5); }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    padding: 0.2rem 1rem;
+    background: rgba(46, 50, 57, 0.5); }
+
+#last-name {
+  color: #247BA0; }

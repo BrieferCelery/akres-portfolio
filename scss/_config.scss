@@ -1,0 +1,27 @@
+$primary-color: #292D33;
+$secondary-color: #247BA0;
+
+//media query mixins
+@mixin mediaSm {
+    @media screen and (max-width: 570px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
