@@ -1,0 +1,23 @@
+{
+  "name": "akres",
+  "version": "1.0.0",
+  "description": "web portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azcodess/akres-portfolio.git"
+  },
+  "author": "Aaron Kane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azcodess/akres-portfolio/issues"
+  },
+  "homepage": "https://github.com/azcodess/akres-portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "sass": "^1.26.3"
+  }
+}
