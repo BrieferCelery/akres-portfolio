@@ -9,7 +9,7 @@
 
 html {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: $font-family;
     font-size: 10px;
 }
 
@@ -39,8 +39,9 @@ h3 {
     color: $secondary-color;
 }
 
+//********HOME PAGE********
 #wrapper {
-    background: linear-gradient(326deg, $secondary-color 0%, rgba(164, 80, 139, 0.8) 74%),
+    background: linear-gradient(326deg, $primary-color 0%, $secondary-color 74%),
         url("../img/code.jpg") center no-repeat;
     background-size: cover;
     position: relative;
@@ -48,12 +49,11 @@ h3 {
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 1 auto auto;
-    grid-template-columns: auto auto;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
     grid-template-areas:
-        "nav"
         "banner headings"
-        "icons";
+        "icons cube";
 
 }
 
@@ -66,49 +66,6 @@ h3 {
 }
 
 .icons {
-    grid-area: icons;
-}
-
-.nav {
-    grid-area: nav;
-}
-
-// .logo {
-//     justify-content: start;
-//     margin-left: 1rem;
-//     margin-top: 2rem;
-// }
-
-// .nav-list {
-//     display: flex;
-//     position: absolute;
-//     right: 1rem;
-//     bottom: 1fr;
-// }
-
-// .nav-item {
-//     margin: 1rem;
-// }
-
-// .main-content {
-//     grid-area: main;
-//     background: linear-gradient(326deg, $secondary-color 0%, rgba(164, 80, 139, 0.8) 74%),
-//         url("../img/code.jpg") center no-repeat;
-//     background-size: cover;
-//     position: relative;
-// }
-
-// .main {
-//     grid-template-rows: 1 auto auto;
-//     grid-template-columns: 1 1;
-//     grid-template-areas:
-//         "navbar"
-//         "banner lg-heading"
-//         "icons sm-heading";
-
-// }
-
-.icons {
     margin-top: 1rem;
     grid-area: icons;
 
@@ -116,7 +73,7 @@ h3 {
         padding: 0.4rem;
 
         &:hover {
-            color: $secondary-color;
+            color: $primary-color;
             @include easeOut();
         }
     }
