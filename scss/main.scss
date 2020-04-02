@@ -58,12 +58,12 @@ h3 {
 }
 
 .navbar {
-    float: right;
+    float: left;
     display: flex;
     grid-column: 3 / 4;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: flex-start;
 }
 
 #nav-list {
@@ -150,6 +150,9 @@ h3 {
 
 #about {
     background: $primary-color;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    position: absolute;
 }
 
 .sm-heading {
@@ -157,6 +160,7 @@ h3 {
 }
 
 .about-info {
+    position: relative;
     display: grid;
     grid-gap: 10px;
     grid-template-rows: 25% 25% 25% 25%;
@@ -223,7 +227,7 @@ h3 {
 
 //CONTACT PAGE
 #contact {
-    size: cover;
+    position: absolute;
     background: $primary-color;
 }
 
@@ -265,6 +269,12 @@ h3 {
 /* TODO::
 black github button must be deleted and put in &:hover
 */
+
+#work {
+    position: absolute;
+    background: $primary-color;
+}
+
 .projects {
     display: grid;
     grid-gap: 0.7rem;

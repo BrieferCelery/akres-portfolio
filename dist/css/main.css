@@ -224,12 +224,12 @@ h3 {
   grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr; }
 
 .navbar {
-  float: right;
+  float: left;
   display: flex;
   grid-column: 3 / 4;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: start;
+  align-items: flex-start; }
 
 #nav-list {
   display: flex;
@@ -292,12 +292,16 @@ h3 {
       transition: all 1.5s ease-out; }
 
 #about {
-  background: #292D33; }
+  background: #292D33;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  position: absolute; }
 
 .sm-heading {
   color: #eee; }
 
 .about-info {
+  position: relative;
   display: grid;
   grid-gap: 10px;
   grid-template-rows: 25% 25% 25% 25%;
@@ -347,7 +351,7 @@ h3 {
   border-bottom: solid 3px #70C1B3; }
 
 #contact {
-  size: cover;
+  position: absolute;
   background: #292D33; }
 
 .sm-heading {
@@ -378,6 +382,10 @@ h3 {
 /* TODO::
 black github button must be deleted and put in &:hover
 */
+#work {
+  position: absolute;
+  background: #292D33; }
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -478,4 +486,11 @@ black github button must be deleted and put in &:hover
   #about .lg-heading {
     font-size: 20vw; }
   #about .bio {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .navbar {
+    margin-top: 0em; }
+  .nav-link {
+    font-size: 1rem; }
+  main {
+    align-items: flex-start;
+    text-align: center; } }
