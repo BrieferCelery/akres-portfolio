@@ -247,7 +247,7 @@ h3 {
   transition: opacity 150ms ease-in-out; }
 
 .nav-link a ::before {
-  content: '';
+  content: "";
   display: block;
   height: 5px;
   background: black; }
@@ -351,11 +351,17 @@ h3 {
   border-bottom: solid 3px #70C1B3; }
 
 #contact {
-  position: absolute;
-  background: #292D33; }
-
-.sm-heading {
-  color: #eee; }
+  background: #292D33;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 80vw;
+  position: fixed; }
 
 .boxes {
   display: flex;
@@ -372,9 +378,9 @@ h3 {
     .boxes div:hover {
       padding: 1rem 2rem;
       background: #70C1B3;
-      color: set-text-color(#70C1B3); }
+      color: set-text-color(#eee); }
       .boxes div:hover span {
-        color: set-text-color(#292D33); }
+        color: set-text-color(#eee); }
 
 :only-of-type.text-secondary {
   color: #eee; }
@@ -422,9 +428,11 @@ h3 {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #121417;
+  background: #40464f;
   color: set-text-color(#292D33);
-  height: 60px; }
+  height: 60px;
+  width: 100%;
+  position: absolute; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -488,6 +496,6 @@ h3 {
     margin-top: 0em; }
   .nav-link {
     font-size: 1rem; }
-  main {
+  .main {
     align-items: flex-start;
     text-align: center; } }
