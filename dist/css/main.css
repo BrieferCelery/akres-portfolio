@@ -198,22 +198,28 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    margin-top: 2em;
+    font-size: 6rem;
+    color: #eee;
+    background: rgba(46, 50, 57, 0.8); }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    font-size: 2em;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(119, 196, 183, 0.8); }
+    background: rgba(46, 50, 57, 0.8); }
 
 #last-name {
-  color: #FF1654; }
+  color: #70C1B3; }
 
 .navigation {
+  position: relative;
+  margin-top: 0;
   width: 100%;
   line-height: 50px;
   height: 5em;
-  background-color: #70C1B3;
+  background-color: #292D33;
   display: grid;
   grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr; }
 
@@ -252,7 +258,14 @@ h3 {
   float: left; }
 
 #wrapper {
-  background: linear-gradient(326deg, #292D33 0%, #70C1B3 74%), url("../img/code.jpg") center no-repeat;
+  background: url("../img/code.jpg");
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 10;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -260,14 +273,14 @@ h3 {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 50% 50%;
-  grid-template-areas: "banner headings" "icons wrap"; }
+  grid-template-areas: "headings ." "icons wrap"; }
+
+.wrap {
+  grid-area: wrap;
+  z-index: -1000; }
 
 .headings {
   grid-area: headings; }
-
-.banner {
-  grid-area: banner;
-  background-color: #FF1654; }
 
 .icons {
   margin-top: 1rem;
@@ -278,30 +291,15 @@ h3 {
       color: #292D33;
       transition: all 1.5s ease-out; }
 
-.wrap {
-  background-color: #FF1654;
-  grid-area: wrap; }
+#about {
+  background: #292D33; }
 
-main {
-  padding: 4rem;
-  height: 100%;
-  min-height: calc(100vh - 60px);
-  overflow: hidden; }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: #70C1B3;
-        transition: all 1.5s ease-out; }
-  main#home h1 {
-    margin-top: 15vh; }
-  main .img-white {
-    background: #fff; }
+.sm-heading {
+  color: #eee; }
 
 .about-info {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas: "anime bio bio" "anime bio bio" "tech1 tech2 tech3" "tech4 tech5 tech6";
   grid-template-columns: repeat(3, 1fr); }
@@ -314,7 +312,8 @@ main {
 .bio {
   padding-bottom: 8rem;
   grid-area: bio;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color: #eee; }
 
 .job-title {
   color: #70C1B3;
@@ -347,6 +346,13 @@ main {
   margin-top: 2rem;
   border-bottom: solid 3px #70C1B3; }
 
+#contact {
+  size: cover;
+  background: #292D33; }
+
+.sm-heading {
+  color: #eee; }
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -367,7 +373,7 @@ main {
         color: set-text-color(#292D33); }
 
 :only-of-type.text-secondary {
-  color: #70C1B3; }
+  color: #eee; }
 
 /* TODO::
 black github button must be deleted and put in &:hover
@@ -424,44 +430,40 @@ black github button must be deleted and put in &:hover
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    margin-top: 0em; }
+  .nav-link {
+    font-size: 1rem; }
   main {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
+  #wrapper {
+    grid-template-areas: "headings headings" "wrap wrap" "icons ."; }
+    #wrapper .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    padding: 5px;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      width: 130px;
-      height: 120px; }
+      margin-bottom: 1rem;
+      text-align: center; }
+    #wrapper .sm-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      text-align: center; }
+  .wrap {
+    scale: 0.3; }
   .about-info {
     grid-template-areas: "bio" "tech1" "tech2" "tech3" "tech4" "tech5" "tech6";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr; }
+  #about {
+    margin-top: 0rem; }
   .anim {
     display: none; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 570px) {
-  main#home h1 {
-    margin-top: 10vh;
-    font-size: 20vw; }
+  #wrapper h1 {
+    margin-top: 8vh;
+    font-size: 10vw; }
   #contact .lg-heading {
     font-size: 20vw; }
   #work .lg-heading {
@@ -470,8 +472,6 @@ black github button must be deleted and put in &:hover
     grid-template-columns: 1fr; }
     .projects .card {
       width: 100%; }
-  .wrap {
-    display: none; }
   .boxes div {
     max-width: 100%;
     font-size: 1rem; }
