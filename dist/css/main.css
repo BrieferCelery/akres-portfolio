@@ -379,9 +379,6 @@ h3 {
 :only-of-type.text-secondary {
   color: #eee; }
 
-/* TODO::
-black github button must be deleted and put in &:hover
-*/
 #work {
   position: absolute;
   background: #292D33; }
