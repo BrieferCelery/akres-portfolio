@@ -52,7 +52,7 @@ The different screen resolutions are as follows -
 
 ## Navbar
 
-The navbar was designed with native mobiles apps in mind. A collapsable navbar was the first design choice but
+The navbar was designed with native mobiles apps in mind. A collapsable navbar was the first design choice but this was abandoned for a tab design. This was done to give the website a more native mobile app feel.
 
 ## Design HomePage
 
@@ -77,3 +77,7 @@ Due to the simplistics nature of this page there was not much needed in order to
 The portfolio page utilises the grid functionality of css with 3 columns on full resolution. The boxes are styled as a card view with an image header and title below.
 
 As the screen scales down the the column numbers decrease down to 1 column. For medium screens this section becomes a 2x2 grid.
+
+# Links
+
+https://trello.com/b/TFGSDz1A/portfolio
