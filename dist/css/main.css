@@ -204,13 +204,17 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(46, 50, 57, 0.5); }
+    background: rgba(119, 196, 183, 0.8); }
 
 #last-name {
   color: #FF1654; }
 
+.navigation {
+  background-color: #70C1B3;
+  display: grid;
+  grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr; }
+
 .navbar {
-  background-color: #FF1654;
   height: 5em;
   display: flex;
   grid-column: 3 / 4;
@@ -232,8 +236,11 @@ h3 {
   text-transform: uppercase;
   transition: opacity 150ms ease-in-out; }
 
-.nav-link :hover {
-  color: #000; }
+.nav-link :hover ::before {
+  transform: scale(1, 1); }
+
+.logo {
+  grid-column: 2/3; }
 
 .brand-image {
   display: block;
@@ -291,13 +298,17 @@ main {
 .about-info {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "anime bio bio" "tech1 tech2 tech3" "tech4 tech5 .";
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "anime bio bio" "anime bio bio" "tech1 tech2 tech3" "tech4 tech5 tech6";
   grid-template-columns: repeat(3, 1fr); }
 
 .anim {
-  grid-area: anime; }
+  grid-area: anime;
+  padding-left: 4rem;
+  padding-top: -10rem; }
 
 .bio {
+  padding-bottom: 8rem;
   grid-area: bio;
   font-size: 1.5rem; }
 
@@ -323,9 +334,13 @@ main {
 .tech-5 {
   grid-area: tech5; }
 
+.tech-6 {
+  grid-area: tech6; }
+
 .job {
   background: #343941;
   padding: 0.5rem;
+  margin-top: 2rem;
   border-bottom: solid 3px #70C1B3; }
 
 .boxes {
@@ -431,8 +446,9 @@ black github button must be deleted and put in &:hover
       width: 130px;
       height: 120px; }
   .about-info {
-    grid-template-areas: "bio" "tech1" "tech2" "tech3" "tech4" "tech5";
-    grid-template-columns: 1fr; }
+    grid-template-areas: "bio" "tech1" "tech2" "tech3" "tech4" "tech5" "tech6";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; }
   .anim {
     display: none; }
   .projects {

@@ -30,7 +30,7 @@ h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
+        background: rgba(lighten($secondary-color, 2), 0.8);
     }
 }
 
@@ -41,8 +41,13 @@ h3 {
 
 //*********NAVBAR*********
 
+.navigation {
+    background-color: $secondary-color;
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+}
+
 .navbar {
-    background-color: $third-color;
     height: 5em;
     display: flex;
     grid-column: 3 / 4;
@@ -68,8 +73,12 @@ h3 {
     transition: opacity 150ms ease-in-out;
 }
 
-.nav-link :hover{
-    color: #000;
+.nav-link :hover ::before {
+     transform: scale(1, 1);
+}
+
+.logo {
+    grid-column: 2/3;
 }
 
 .brand-image {
@@ -158,21 +167,27 @@ main {
     }
 }
 
+
 .about-info {
     display: grid;
     grid-gap: 20px;
+    grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas:
         "anime bio bio"
+        "anime bio bio"
         "tech1 tech2 tech3"
-        "tech4 tech5 .";
+        "tech4 tech5 tech6";
     grid-template-columns: repeat(3, 1fr);
 }
 
 .anim {
     grid-area: anime;
+    padding-left: 4rem;
+    padding-top: -10rem;
 }
 
 .bio {
+    padding-bottom: 8rem;
     grid-area: bio;
     font-size: 1.5rem;
 }
@@ -206,9 +221,14 @@ main {
     grid-area: tech5;
 }
 
+.tech-6 {
+    grid-area: tech6;
+}
+
 .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
+    margin-top: 2rem;
     border-bottom: solid 3px $secondary-color;
 }
 
