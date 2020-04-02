@@ -80,4 +80,6 @@ As the screen scales down the the column numbers decrease down to 1 column. For 
 
 # Links
 
-https://trello.com/b/TFGSDz1A/portfolio
+Github - https://github.com/azcodess/akres-portfolio
+
+Site - https://azcodess.github.io/akres-portfolio/

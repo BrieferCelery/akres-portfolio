@@ -4,6 +4,7 @@
   "description": "web portfolio",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "sass": "node-sass -w scss/ -o dist/css --recursive"
   },
   "repository": {
@@ -15,8 +16,9 @@
   "bugs": {
     "url": "https://github.com/azcodess/akres-portfolio/issues"
   },
-  "homepage": "https://github.com/azcodess/akres-portfolio#readme",
+  "homepage": "https://azcodess.github.io/akres-portfolio/",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "sass": "^1.26.3"
   }

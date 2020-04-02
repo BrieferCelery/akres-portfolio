@@ -1,7 +1,6 @@
 @import "config";
 @import "animations";
 
-
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +37,6 @@ h3 {
         background: rgba(lighten($primary-color, 2), 0.8);
     }
 }
-
 
 #last-name {
     color: $secondary-color;
@@ -85,7 +83,7 @@ h3 {
 }
 
 .nav-link a ::before {
-    content: '';
+    content: "";
     display: block;
     height: 5px;
     background: black;
@@ -118,7 +116,6 @@ h3 {
     grid-template-areas:
         "headings ."
         "icons wrap";
-
 }
 
 .wrap {
@@ -128,7 +125,6 @@ h3 {
 
 .headings {
     grid-area: headings;
-
 }
 
 .icons {
@@ -144,7 +140,6 @@ h3 {
         }
     }
 }
-
 
 // *****ABOUT SECTION*****
 
@@ -227,13 +222,36 @@ h3 {
 
 //CONTACT PAGE
 #contact {
-    position: absolute;
     background: $primary-color;
+    // background: url("../img/code.jpg");
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 80vw;
+    position: fixed;
+
+    // display: grid;
+    // grid-template-rows: 25% 25% 50%;
+    // grid-template-areas:
+    //     "lg-heading"
+    //     "sm-heading"
+    //     "boxes";
 }
 
-.sm-heading {
-    color: $my-white;
-}
+// #contact {
+//     position: relative;
+// // }
+// .lg-heading {
+// }
+
+// .sm-heading {
+//     color: $my-white;
+// }
 
 .boxes {
     display: flex;
@@ -252,10 +270,10 @@ h3 {
         &:hover {
             padding: 1rem 2rem;
             background: $secondary-color;
-            color: set-text-color($secondary-color);
+            color: set-text-color($my-white);
 
             span {
-                color: set-text-color($primary-color);
+                color: set-text-color($my-white);
             }
         }
     }
@@ -296,7 +314,6 @@ h3 {
     }
 }
 
-
 //Button styles
 .btn {
     display: block;
@@ -327,9 +344,11 @@ h3 {
 #main-footer {
     text-align: center;
     padding: 1rem;
-    background: darken($primary-color, 10);
+    background: lighten($primary-color, 10);
     color: set-text-color($primary-color);
     height: 60px;
+    width: 100%;
+    position: absolute;
 }
 
 @import "mobile";

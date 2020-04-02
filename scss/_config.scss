@@ -8,9 +8,9 @@ $font-family: sans-serif;
 // $home-image: url(../img/code.jpg);
 // $background-opacity: 0.5;
 
-// @mixin easeOut {
-//     transition: all 1.5s ease-out;
-// }
+@mixin easeOut {
+    transition: all 1.5s ease-out;
+}
 
 //media query mixins
 @mixin mediaSm {
