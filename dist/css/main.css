@@ -18,7 +18,7 @@
   width: 150px;
   opacity: 0.9;
   background-color: rgba(5, 5, 5, 0.2);
-  border: solid 1px #247BA0;
+  border: solid 1px #70C1B3;
   color: #ffffff; }
 
 .front {
@@ -207,10 +207,37 @@ h3 {
     background: rgba(46, 50, 57, 0.5); }
 
 #last-name {
-  color: #247BA0; }
+  color: #FF1654; }
+
+.navbar {
+  background-color: #FF1654;
+  height: 5em;
+  display: flex;
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#nav-list {
+  display: flex; }
+
+.nav-item {
+  display: flex;
+  margin-right: 5em; }
+
+.nav-link {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: opacity 150ms ease-in-out; }
+
+.brand-image {
+  display: block;
+  max-width: 10%;
+  max-height: 10%; }
 
 #wrapper {
-  background: linear-gradient(326deg, #292D33 0%, #247BA0 74%), url("../img/code.jpg") center no-repeat;
+  background: linear-gradient(326deg, #292D33 0%, #70C1B3 74%), url("../img/code.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -218,13 +245,14 @@ h3 {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 50% 50%;
-  grid-template-areas: "banner headings" "icons cube"; }
+  grid-template-areas: "banner headings" "icons wrap"; }
 
 .headings {
   grid-area: headings; }
 
 .banner {
-  grid-area: banner; }
+  grid-area: banner;
+  background-color: #FF1654; }
 
 .icons {
   margin-top: 1rem;
@@ -234,6 +262,10 @@ h3 {
     .icons a:hover {
       color: #292D33;
       transition: all 1.5s ease-out; }
+
+.wrap {
+  background-color: #FF1654;
+  grid-area: wrap; }
 
 main {
   padding: 4rem;
@@ -245,7 +277,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #247BA0;
+        color: #70C1B3;
         transition: all 1.5s ease-out; }
   main#home h1 {
     margin-top: 15vh; }
@@ -266,7 +298,7 @@ main {
   font-size: 1.5rem; }
 
 .job-title {
-  color: #247BA0;
+  color: #70C1B3;
   text-decoration: underline; }
 
 .checked {
@@ -290,7 +322,7 @@ main {
 .job {
   background: #343941;
   padding: 0.5rem;
-  border-bottom: solid 3px #247BA0; }
+  border-bottom: solid 3px #70C1B3; }
 
 .boxes {
   display: flex;
@@ -306,13 +338,13 @@ main {
     transition: all 1.5s ease-out; }
     .boxes div:hover {
       padding: 1rem 2rem;
-      background: #247BA0;
-      color: set-text-color(#247BA0); }
+      background: #70C1B3;
+      color: set-text-color(#70C1B3); }
       .boxes div:hover span {
         color: set-text-color(#292D33); }
 
 :only-of-type.text-secondary {
-  color: #247BA0; }
+  color: #70C1B3; }
 
 /* TODO::
 black github button must be deleted and put in &:hover
@@ -332,7 +364,7 @@ black github button must be deleted and put in &:hover
     border-radius: 5px; }
   .projects .card a:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    color: #247BA0; }
+    color: #70C1B3; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -341,8 +373,8 @@ black github button must be deleted and put in &:hover
   border-radius: 5px;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #247BA0;
-    color: set-text-color(#247BA0);
+    background: #70C1B3;
+    color: set-text-color(#70C1B3);
     transition: all 1.5s ease-out; }
 
 .btn-dark {

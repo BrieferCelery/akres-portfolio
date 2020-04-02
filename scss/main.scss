@@ -36,7 +36,46 @@ h3 {
 
 
 #last-name {
-    color: $secondary-color;
+    color: $third-color;
+}
+
+//*********NAVBAR*********
+
+.navbar {
+    background-color: $third-color;
+    height: 5em;
+    display: flex;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-list {
+    display: flex;
+}
+
+.nav-item {
+    display: flex;
+    margin-right: 5em;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: opacity 150ms ease-in-out;
+}
+
+// .logo {
+//     max-width: fit-content;
+//     max-height: fit-content;
+// }
+
+.brand-image {
+    display: block;
+    max-width: 10%;
+    max-height: 10%;
 }
 
 //********HOME PAGE********
@@ -53,16 +92,18 @@ h3 {
     grid-template-columns: 50% 50%;
     grid-template-areas:
         "banner headings"
-        "icons cube";
+        "icons wrap";
 
 }
 
 .headings {
     grid-area: headings;
+
 }
 
 .banner {
     grid-area: banner;
+    background-color: $third-color;
 }
 
 .icons {
@@ -77,6 +118,11 @@ h3 {
             @include easeOut();
         }
     }
+}
+
+.wrap {
+    background-color: $third-color;
+    grid-area: wrap;
 }
 
 // *****ABOUT SECTION*****
