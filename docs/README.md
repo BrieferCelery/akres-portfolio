@@ -15,7 +15,11 @@ The intended audience of this website is potential job recruiters, therefore the
 
 # Design and Planning
 
-During the design and planning process it was important to consider the constraints of the project. The project is a personal portfolio advertising myself and my brand. This meant that I had to design the site emphasising my strengths in frontend development.
+During the design and planning process it was important to consider the constraints of the project. The project is a personal portfolio advertising myself and my brand. This meant that I had to design the site emphasising my strengths in frontend development which is animations and responsiveness.
+
+## Theme of the website
+
+The website must be aesthetically pleasing but also encourage the user to interact with the elements on the screen. This will help the user understand the website and provide some entertainment while view the pages.
 
 ## Tools used
 
@@ -56,7 +60,7 @@ The navbar was designed with native mobiles apps in mind. A collapsable navbar w
 
 ## Design HomePage
 
-The homepage is design using a 2x2 css grid all equal in size. Name and title are place in the the first grid with as a larger heading with a smaller heading underneath. Below that grid are links to other related webpages (github and linkedin). The grid to the right of the links is a cube animation with images of languages and frameworks I am proficient in. This gives the homepage a futuristic feel. The cube rotates slowly and expands when hovered over. It sits in the bottom right grid but expands into the grid above therefore the above grid is left blank.
+The homepage is design using a 2x2 css grid all equal in size. Name and title are place in the the first grid with as a larger heading with a smaller heading underneath. Below that grid are links to other related webpages (github and linkedin). The grid to the right of the links is a cube animation with images of languages and frameworks I am proficient in. This gives the homepage a futuristic feel. The cube rotates slowly and expands when hovered over. This design was done using css. The cube is six squares joined together with images inside and a thin border. The square are joined together using roatate and transform in CSS. The cube has a hover effect that expands the squares outward while still rotating. It sits in the bottom right grid but expands into the grid above therefore the above grid is left blank.
 
 For smaller screen resoltions only the heading grid and cube grid are kept and all unneccassary space is removed.
 
